@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1</title>
+	<script type="text/javascript" src=https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var module= angular.module("myapp", []);
+		module.controller("mycontroller", function($scope) {
+			$scope.name1= "Neha Mishra";
+			$scope.number1=46;
+			$scope.name2= "Anjali Sharma";
+			$scope.number2=37;
+		});
+	</script>
+</head>
+<body ng-app="myapp" ng-controller="mycontroller">
+	<div>
+		<table class= "table table-responsive table-striped table-bordered">
+			<thead>
+				<th>Name</th>
+				<th>Roll no</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{name1 | uppercase}}</td>
+					<td>{{number1}}</td>
+				</tr>
+				<tr>
+					<td>{{name2 | uppercase}}</td>
+					<td>{{number2}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
